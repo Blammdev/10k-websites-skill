@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f0e4" />
+    <meta name="description" content="Order Lethargic Gardens seeds and merch for pickup. Online orders land in the POS queue and sync to the register." />
+    <meta property="og:title" content="Lethargic Gardens — Order for pickup" />
+    <meta property="og:description" content="Place a pickup order online. It lands in the POS queue and syncs to the register." />
+    <meta property="og:image" content="https://lethargic-gardens.vercel.app/images/garden-hero.jpg" />
+    <link rel="canonical" href="https://lethargic-gardens.vercel.app/order" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232f4838'/%3E%3Cpath d='M32 48V29m0 7C20 36 13 28 14 17c11 0 18 7 19 18m-1-1c1-12 9-20 20-20 1 11-6 19-19 21' fill='none' stroke='%23e8b77d' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/pages.css" />
+    <script src="/main.js" defer></script>
+    <script src="/order.js" defer></script>
+    <title>Order for pickup — Lethargic Gardens</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="announcement-bar">
+      <div class="announcement-bar__inner container">
+        <p><span class="announcement-bar__spark" aria-hidden="true">✳</span> A little slower. A little greener. <a href="/#method">Our way of growing <span aria-hidden="true">↗</span></a></p>
+        <span class="announcement-bar__aside">GOOD THINGS TAKE THEIR TIME</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="site-header__inner container">
+        <a class="brand" href="/" aria-label="Lethargic Gardens home">
+          <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M24 40V23m0 8C14.5 31 9.5 25.5 10 17c8.2-.1 13.6 4.6 14 13m.1-2c.9-9.1 6.4-14.5 15-14.4.3 8.3-5.3 14.4-15 16.2" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="brand__wordmark"><span>LETHARGIC</span><span>GARDENS</span></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="/#house-plants">House plants</a>
+          <a href="/#vegetables">Vegetables</a>
+          <a href="/#fruit">Fruit</a>
+          <a href="/#hemp-seeds">Hemp seeds</a>
+          <a href="/merch">Merch</a>
+          <a href="/order" aria-current="page">Order</a>
+          <a href="/#method">Our method</a>
+        </nav>
+
+        <div class="site-header__actions">
+          <button class="bag-trigger" type="button" data-open-cart aria-controls="cart-drawer" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.5 8h13l1.1 12H4.4L5.5 8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Bag</span>
+            <span class="bag-count" data-cart-count aria-label="0 items in bag">0</span>
+          </button>
+          <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile navigation" hidden>
+        <a href="/#house-plants">House plants <span>01</span></a>
+        <a href="/#vegetables">Vegetables <span>02</span></a>
+        <a href="/#fruit">Fruit <span>03</span></a>
+        <a href="/#hemp-seeds">Hemp seeds <span>04</span></a>
+        <a href="/merch">Merch <span>05</span></a>
+        <a href="/order" aria-current="page">Order <span>06</span></a>
+        <a href="/#method">Our method <span>↘</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero" aria-labelledby="order-title">
+        <div class="page-hero__inner container">
+          <p class="eyebrow"><span class="eyebrow__flower" aria-hidden="true">✳</span> Online ordering / POS sync</p>
+          <h1 id="order-title">Order for <em>pickup.</em></h1>
+          <p class="page-hero__lede">Place a pickup order online and it lands in the POS queue, ready to sync to the register. No phone tag, no paper tickets. Just pick a time, we will have it packed when you arrive.</p>
+          <div class="page-hero__buttons">
+            <a class="button button--dark" href="#order-builder">Start an order <span class="button__arrow" aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#pos-sync">How POS sync works <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero__footnote"><span class="hero__footnote-rule" aria-hidden="true"></span><span>Pickup at the garden stand <i>·</i> Pay at pickup <i>·</i> Syncs to the POS</span></div>
+        </div>
+      </section>
+
+      <section class="rhythm" aria-label="How ordering works, in short">
+        <div class="rhythm__inner container">
+          <p class="eyebrow rhythm__label">From click to counter</p>
+          <div class="rhythm__steps">
+            <p><span>01</span> Order online. <em>Pick a pickup time.</em></p>
+            <span class="rhythm__separator" aria-hidden="true">✳</span>
+            <p><span>02</span> It lands in the POS queue. <em>Ready to sync.</em></p>
+            <span class="rhythm__separator" aria-hidden="true">✳</span>
+            <p><span>03</span> Syncs to the register. <em>Pay at pickup.</em></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-section" id="order-builder" aria-labelledby="order-builder-title">
+        <div class="container">
+          <div class="collection-heading">
+            <div>
+              <p class="eyebrow"><span class="collection-heading__number">06</span> Pickup <span class="eyebrow__slash">/</span> Garden stand</p>
+              <h2 id="order-builder-title">Build your <em>order.</em></h2>
+            </div>
+            <p class="collection-heading__copy">Seeds and merch, one order. Tell us when you are coming and we will pack it while you wander over. Pay at pickup, no card needed online.</p>
+          </div>
+
+          <form class="order-layout" data-order-form novalidate>
+            <div class="order-panel">
+              <h3 class="order-panel__title">Pickup details</h3>
+              <div class="field">
+                <label for="order-name">Your name</label>
+                <input id="order-name" name="name" type="text" autocomplete="name" placeholder="e.g. Sam Gardener" required />
+              </div>
+              <div class="field">
+                <label for="order-phone">Phone</label>
+                <input id="order-phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. (555) 010-2030" required />
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="order-day">Pickup day</label>
+                  <select id="order-day" name="day" data-order-day></select>
+                </div>
+                <div class="field">
+                  <label for="order-time">Pickup time</label>
+                  <select id="order-time" name="time">
+                    <option>Morning, 9 to 11</option>
+                    <option>Midday, 11 to 1</option>
+                    <option>Afternoon, 1 to 3</option>
+                    <option>Late afternoon, 3 to 5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="order-notes">Notes for the packer <span class="field__optional">(optional)</span></label>
+                <textarea id="order-notes" name="notes" rows="3" placeholder="Extra seed packets, a gift note, anything we should know."></textarea>
+              </div>
+              <p class="order-form__message" data-order-message aria-live="polite"></p>
+            </div>
+
+            <div class="order-panel">
+              <h3 class="order-panel__title">What are you picking up?</h3>
+              <div class="order-items" data-order-items></div>
+              <div class="order-total">
+                <span>Order total</span>
+                <strong data-order-total>$0.00</strong>
+              </div>
+              <button class="button button--dark order-submit" type="submit">Place pickup order <span class="button__arrow" aria-hidden="true">↗</span></button>
+              <p class="order-panel__note">Placing an order saves it to the POS queue in this browser. Nothing is charged online.</p>
+            </div>
+          </form>
+
+          <div class="ticket" data-ticket hidden>
+            <div class="ticket__head">
+              <div>
+                <p class="eyebrow">Order placed</p>
+                <h3 class="ticket__number" data-ticket-number>LG-1001</h3>
+              </div>
+              <span class="status-chip status-chip--queued" data-ticket-status>Queued for POS</span>
+            </div>
+            <dl class="ticket__meta" data-ticket-meta></dl>
+            <ul class="ticket__lines" data-ticket-lines></ul>
+            <div class="ticket__foot">
+              <span>Total due at pickup</span>
+              <strong data-ticket-total>$0.00</strong>
+            </div>
+            <div class="ticket__actions">
+              <button class="button button--dark" type="button" data-print-ticket>Print ticket</button>
+              <button class="button button--ghost" type="button" data-new-order>Start another order</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pos-section section-pad" id="pos-sync" aria-labelledby="pos-sync-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow"><span class="eyebrow__flower" aria-hidden="true">✳</span> POS sync</p>
+            <h2 id="pos-sync-title">Orders sync to <em>the register.</em></h2>
+            <p>Every pickup order lands in a queue first. Sync pushes the queue to your point of sale so the register, the receipt printer and the day's totals all agree. Connect your POS below to go live.</p>
+          </div>
+
+          <div class="pos-grid">
+            <div class="order-panel pos-card">
+              <h3 class="order-panel__title">POS connection</h3>
+              <p class="pos-card__lede" data-pos-status>No POS connected yet. Orders stay in this browser until you connect one.</p>
+              <div class="field">
+                <label for="pos-provider">Point of sale</label>
+                <select id="pos-provider" name="provider">
+                  <option value="">Not connected</option>
+                  <option value="square">Square</option>
+                  <option value="clover">Clover</option>
+                  <option value="toast">Toast</option>
+                  <option value="shopify">Shopify POS</option>
+                  <option value="custom">Custom webhook</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="pos-endpoint">API endpoint URL</label>
+                <input id="pos-endpoint" name="endpoint" type="url" inputmode="url" placeholder="https://connect.squareup.com/v2/orders" />
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="pos-location">Location ID</label>
+                  <input id="pos-location" name="location" type="text" autocomplete="off" placeholder="e.g. LG-STAND-01" />
+                </div>
+                <div class="field">
+                  <label for="pos-key">API key <span class="field__optional">(stays in this browser)</span></label>
+                  <input id="pos-key" name="key" type="password" autocomplete="off" placeholder="Paste your POS API key" />
+                </div>
+              </div>
+              <div class="pos-card__actions">
+                <button class="button button--dark" type="button" data-pos-save>Save connection</button>
+                <button class="button button--ghost" type="button" data-pos-test>Test connection</button>
+              </div>
+              <p class="order-panel__note">Demo mode until connected: sync runs locally and logs every step. Keys are stored only in this browser, never sent anywhere until you connect a POS.</p>
+            </div>
+
+            <div class="order-panel pos-card">
+              <div class="pos-card__head">
+                <h3 class="order-panel__title">Sync queue</h3>
+                <button class="button button--dark" type="button" data-sync-now>Sync now</button>
+              </div>
+              <div class="queue-list" data-queue-list></div>
+              <div class="pos-card__actions">
+                <button class="button button--ghost" type="button" data-export-json>Download JSON</button>
+                <button class="button button--ghost" type="button" data-export-csv>Download CSV</button>
+                <button class="button button--ghost" type="button" data-clear-synced>Clear synced</button>
+              </div>
+              <h4 class="pos-log__title">Sync log</h4>
+              <ol class="pos-log" data-sync-log aria-live="polite"></ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="method section-pad" aria-labelledby="order-method-title">
+        <div class="container">
+          <div class="section-heading section-heading--center">
+            <p class="eyebrow"><span class="eyebrow__flower" aria-hidden="true">✳</span> How it works</p>
+            <h2 id="order-method-title">From click to <em>counter.</em></h2>
+            <p>Three quiet steps. The register does the loud part.</p>
+          </div>
+          <div class="method-grid">
+            <article class="method-card">
+              <span class="method-card__number">01</span>
+              <div class="method-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 36c8-1 11-6 13-13m0 0C12 24 8 19 9 12c7 0 12 4 13 11Zm0 0c1-8 6-13 14-13 0 7-5 13-14 15Zm0 0v14m-10-3h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 10c2-3 5-4 8-3-1 4-3 6-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+              <h3>Order online</h3>
+              <p>Customers pick seeds and merch, choose a pickup window, and place the order. No account, no card, no fuss.</p>
+            </article>
+            <article class="method-card">
+              <span class="method-card__number">02</span>
+              <div class="method-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M9 28h30l-3 14H12L9 28Zm4 0 5-14h12l5 14M18 14V9h12v5M15 34h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 4c3.5 4 4.5 6.5 0 9-4.5-2.5-3.5-5 0-9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+              <h3>Lands in the POS queue</h3>
+              <p>Each order gets a number and a ticket, then waits in the sync queue with a clear status. Nothing gets lost.</p>
+            </article>
+            <article class="method-card">
+              <span class="method-card__number">03</span>
+              <div class="method-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 41V22m0 6c-8 0-13-5-13-12 7 0 12 4 13 12Zm0-3c1-7 6-11 13-11 0 7-5 12-13 13Zm-9 17h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 8h5m-2.5-2.5v5m22-4h6m-3-3v6m3 13h5m-2.5-2.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+              <h3>Syncs to the register</h3>
+              <p>One click pushes queued orders to Square, Clover, Toast, Shopify POS or your own webhook. Pay at pickup, totals already match.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter" id="newsletter" aria-labelledby="newsletter-title">
+        <div class="newsletter__inner container">
+          <div class="newsletter__heading">
+            <p class="eyebrow"><span class="eyebrow__flower" aria-hidden="true">✳</span> The slow note</p>
+            <h2 id="newsletter-title">No rush.<br /><em>Just seeds.</em></h2>
+          </div>
+          <div class="newsletter__body">
+            <p>Get a slow monthly note on what to sow next. We send one email, whenever we feel like it.</p>
+            <form class="newsletter-form" data-newsletter-form>
+              <label class="sr-only" for="newsletter-email">Your email address</label>
+              <div class="newsletter-form__row">
+                <input id="newsletter-email" name="email" type="email" placeholder="Your email address" autocomplete="email" required />
+                <button class="button button--light" type="submit">Subscribe <span aria-hidden="true">↗</span></button>
+              </div>
+              <p class="newsletter-form__message" data-newsletter-message aria-live="polite">One thoughtful note. No rush, no noise.</p>
+            </form>
+          </div>
+          <span class="newsletter__ornament" aria-hidden="true">✳</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__main container">
+        <a class="brand brand--footer" href="/" aria-label="Lethargic Gardens, back to home">
+          <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 40V23m0 8C14.5 31 9.5 25.5 10 17c8.2-.1 13.6 4.6 14 13m.1-2c.9-9.1 6.4-14.5 15-14.4.3 8.3-5.3 14.4-15 16.2" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          <span class="brand__wordmark"><span>LETHARGIC</span><span>GARDENS</span></span>
+        </a>
+        <p class="site-footer__motto">Good things take their time.</p>
+        <nav class="site-footer__links" aria-label="Footer navigation">
+          <a href="/#collections">Shop seeds</a>
+          <a href="/merch">Merch</a>
+          <a href="/order">Order pickup</a>
+          <a href="/#method">Our method</a>
+          <a href="/#newsletter">The slow note</a>
+          <a href="/#hemp-seeds">Hemp seed notice</a>
+        </nav>
+      </div>
+      <div class="site-footer__bottom container">
+        <span>© 2026 Lethargic Gardens</span>
+        <span>Seeds for the unhurried gardener <i aria-hidden="true">✳</i> Nothing needs to happen today.</span>
+      </div>
+    </footer>
+
+    <button class="cart-backdrop" type="button" data-cart-backdrop aria-label="Close bag" hidden></button>
+    <aside class="cart-drawer" id="cart-drawer" data-cart-drawer role="dialog" aria-modal="true" aria-labelledby="cart-title" tabindex="-1" hidden>
+      <div class="cart-drawer__header">
+        <div>
+          <p class="eyebrow">A little bag of possibility</p>
+          <h2 id="cart-title">Your <em>bag.</em></h2>
+        </div>
+        <button class="cart-close" type="button" data-close-cart aria-label="Close bag"><span></span><span></span></button>
+      </div>
+      <div class="cart-drawer__items" data-cart-items></div>
+      <div class="cart-drawer__footer">
+        <div class="cart-subtotal"><span>Subtotal</span><strong data-cart-total>$0.00</strong></div>
+        <button class="button button--dark cart-checkout" type="button" data-checkout>Continue to checkout <span aria-hidden="true">↗</span></button>
+        <p class="cart-note" data-cart-note>Checkout isn’t connected here yet. For pickup orders, use the order page.</p>
+      </div>
+    </aside>
+    <div class="toast" data-toast role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>
