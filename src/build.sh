@@ -4,6 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 OUT="$ROOT/public"
 mkdir -p "$OUT/images"
+cp "$ROOT/src/images/"*.jpg "$OUT/images/"
 cp "$ROOT/src/index.html" "$OUT/index.html"
 cp "$ROOT/src/merch.html" "$OUT/merch.html"
 cp "$ROOT/src/order.html" "$OUT/order.html"
