@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --color-ink: #070a08;
+  --color-moss: #141b16;
+  --color-soil: #0b110d;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-ink);
+  color: #fff;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+section[id] {
+  scroll-margin-top: 0;
+}
+
+.reveal {
+  opacity: 0;
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 0.8, 0.2, 1),
+    transform 0.9s cubic-bezier(0.22, 0.8, 0.2, 1);
+  transition-delay: var(--d, 0s);
+}
+.reveal-up {
+  transform: translateY(36px);
+}
+.reveal-left {
+  transform: translateX(-48px);
+}
+.reveal-right {
+  transform: translateX(48px);
+}
+.reveal-scale {
+  transform: scale(0.94);
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-14px) rotate(4deg);
+  }
+}
+.float {
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 45s linear infinite;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.toast-in {
+  animation: toast-in 0.35s ease-out both;
+}
+
+@keyframes cue {
+  0%,
+  100% {
+    transform-origin: top;
+    opacity: 0.4;
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform-origin: top;
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+.cue-line {
+  animation: cue 2s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-1.2deg);
+  }
+  50% {
+    transform: rotate(1.2deg);
+  }
+}
+.sway {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: sway 6s ease-in-out infinite;
+}
+
+@keyframes drip {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  20% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(255px);
+  }
+}
+.drip {
+  animation: drip 2.8s ease-in infinite;
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+.slide-in-right {
+  animation: slide-in-right 0.35s cubic-bezier(0.22, 0.8, 0.2, 1) both;
+}
+
+:focus-visible {
+  outline: 2px solid #6ee7b7;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transition: none;
+    transform: none;
+  }
+  .marquee-track,
+  .float,
+  .sway,
+  .drip,
+  .cue-line,
+  .slide-in-right {
+    animation: none !important;
+  }
+}
