@@ -130,10 +130,11 @@
           if (!entry.isIntersecting) return;
           var el = entry.target;
           var target = Number(el.getAttribute("data-count")) || 0;
-          var start = performance.now();
+          var start = null;
           var duration = 1100;
           function step(now) {
-            var t = Math.min(1, (now - start) / duration);
+            if (start === null) start = now;
+            var t = Math.max(0, Math.min(1, (now - start) / duration));
             var eased = 1 - Math.pow(1 - t, 3);
             el.textContent = String(Math.round(target * eased));
             if (t < 1) requestAnimationFrame(step);
@@ -276,12 +277,17 @@
     return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
   }
 
+  function fieldValue(id) {
+    var el = form.elements.namedItem(id);
+    return el ? String(el.value || "").trim() : "";
+  }
+
   function validate() {
     var ok = true;
-    var name = form.name.value.trim();
-    var phone = form.phone.value.trim();
-    var email = form.email.value.trim();
-    var service = form.service.value;
+    var name = fieldValue("name");
+    var phone = fieldValue("phone");
+    var email = fieldValue("email");
+    var service = fieldValue("service");
 
     fieldError("name", !name);
     if (!name) ok = false;
@@ -297,7 +303,7 @@
     fieldError("service", !service);
     if (!service) ok = false;
 
-    return ok ? { name: name, phone: phone, email: email, service: service, details: form.details.value.trim() } : null;
+    return ok ? { name: name, phone: phone, email: email, service: service, details: fieldValue("details") } : null;
   }
 
   function buildMessage(data) {
