@@ -3,290 +3,627 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f4f0e4" />
-    <meta name="description" content="House plants, vegetables, fruit and hemp seeds for the unhurried gardener. Carefully sourced, honestly described, and never rushed." />
-    <meta property="og:title" content="Lethargic Gardens — Grow slowly. Grow well." />
-    <meta property="og:description" content="Seeds for the unhurried gardener. Nothing here needs to happen today." />
-    <meta property="og:image" content="https://lethargic-gardens.vercel.app/images/garden-hero.jpg" />
-    <link rel="canonical" href="https://lethargic-gardens.vercel.app/" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232f4838'/%3E%3Cpath d='M32 48V29m0 7C20 36 13 28 14 17c11 0 18 7 19 18m-1-1c1-12 9-20 20-20 1 11-6 19-19 21' fill='none' stroke='%23e8b77d' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/%3E%3C/svg%3E" />
-    <link rel="preload" as="image" href="/images/garden-hero.jpg" />
+    <meta name="theme-color" content="#14211c" />
+    <title>Costello Painting Inc. | Painting and Remodeling in Mulliken, Michigan</title>
+    <meta
+      name="description"
+      content="Costello Painting Inc. brings remodeling and painting craft to homes and businesses around Mulliken, Michigan. Interior and exterior painting, remodeling, and hot rubber sealing for bins and tanks. Call (901) 210-3709."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Costello Painting Inc. — Transforming spaces, one wall at a time." />
+    <meta
+      property="og:description"
+      content="Over 15 years of painting and remodeling in Mulliken, Michigan. Premium materials, careful prep, attention to every edge."
+    />
+    <meta property="og:image" content="/images/hero-painter.jpg" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2314211c'/%3E%3Cpath d='M20 46V20h9v26zm15 0V27h9v19z' fill='%23c9973f'/%3E%3Crect x='17' y='16' width='30' height='6' rx='3' fill='%23f4efe4'/%3E%3C/svg%3E" />
+    <link rel="preload" as="image" href="/images/hero-painter.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/main.js" defer></script>
-    <title>Lethargic Gardens — Grow slowly. Grow well.</title>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="announcement-bar">
-      <div class="announcement-bar__inner container">
-        <p><span class="announcement-bar__spark" aria-hidden="true">✳</span> A little slower. A little greener. <a href="#method">Our way of growing <span aria-hidden="true">↗</span></a></p>
-        <span class="announcement-bar__aside">GOOD THINGS TAKE THEIR TIME</span>
-      </div>
-    </div>
+    <div class="wash" id="wash" aria-hidden="true"></div>
 
-    <header class="site-header">
+    <header class="site-header" id="top">
       <div class="site-header__inner container">
-        <a class="brand" href="#top" aria-label="Lethargic Gardens home">
+        <a class="brand" href="#top" aria-label="Costello Painting Inc. home">
           <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <path d="M24 40V23m0 8C14.5 31 9.5 25.5 10 17c8.2-.1 13.6 4.6 14 13m.1-2c.9-9.1 6.4-14.5 15-14.4.3 8.3-5.3 14.4-15 16.2" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+            <rect x="13" y="6" width="22" height="5" rx="2.5" fill="currentColor" opacity=".55" />
+            <path d="M14 15h20l-3.2 27H17.2L14 15Z" fill="currentColor" opacity=".18" />
+            <path d="M14 15h20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+            <path d="M18.5 21.5c2.6 2.4 2.9 5.2 1.2 7.6-1.7 2.4-1.4 4.6.6 6.4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
           </svg>
-          <span class="brand__wordmark"><span>LETHARGIC</span><span>GARDENS</span></span>
+          <span class="brand__wordmark">
+            <span class="brand__name">Costello Painting</span>
+            <span class="brand__sub">Painting &amp; Remodeling · Mulliken, MI</span>
+          </span>
         </a>
 
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="#house-plants">House plants</a>
-          <a href="#vegetables">Vegetables</a>
-          <a href="#fruit">Fruit</a>
-          <a href="#hemp-seeds">Hemp seeds</a>
-          <a href="/merch">Merch</a>
-          <a href="/order">Order</a>
-          <a href="#method">Our method</a>
+        <nav class="nav" id="nav" aria-label="Main">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#work">Our work</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <div class="site-header__actions">
-          <button class="bag-trigger" type="button" data-open-cart aria-controls="cart-drawer" aria-expanded="false">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.5 8h13l1.1 12H4.4L5.5 8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            <span>Bag</span>
-            <span class="bag-count" data-cart-count aria-label="0 items in bag">0</span>
-          </button>
-          <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <a class="header-phone" href="tel:+19012103709">
+            <span class="header-phone__label">Call anytime</span>
+            <span class="header-phone__digits">(901) 210-3709</span>
+          </a>
+          <a class="btn btn--solid btn--sm" href="#contact">Request a quote</a>
+          <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
             <span></span><span></span>
           </button>
         </div>
       </div>
-      <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile navigation" hidden>
-        <a href="#house-plants">House plants <span>01</span></a>
-        <a href="#vegetables">Vegetables <span>02</span></a>
-        <a href="#fruit">Fruit <span>03</span></a>
-        <a href="#hemp-seeds">Hemp seeds <span>04</span></a>
-        <a href="#method">Our method <span>↘</span></a>
-      </nav>
     </header>
 
     <main id="main">
-      <section class="hero" id="top" aria-labelledby="hero-title">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero__media">
+          <img
+            src="/images/hero-painter.jpg"
+            alt="A painter rolling paint onto a wall in an empty room"
+            width="1920"
+            height="1280"
+            fetchpriority="high"
+          />
+          <div class="hero__shade" aria-hidden="true"></div>
+        </div>
+
         <div class="hero__inner container">
           <div class="hero__copy">
-            <p class="eyebrow hero__eyebrow"><span class="eyebrow__flower" aria-hidden="true">✳</span> Seeds for the unhurried gardener</p>
-            <h1 id="hero-title">Grow <em>slowly.</em><br />Grow <em>well.</em></h1>
-            <p class="hero__lede">House plants, vegetables, fruit and hemp seeds. Carefully sourced, honestly described, and never rushed. Nothing here needs to happen today.</p>
-            <div class="hero__buttons">
-              <a class="button button--dark" href="#collections">Browse the seeds <span class="button__arrow" aria-hidden="true">↗</span></a>
-              <a class="text-link" href="#method">How it works <span aria-hidden="true">↓</span></a>
+            <p class="eyebrow eyebrow--light"><span></span> Mulliken, Michigan · Since 2010</p>
+            <h1>Transforming spaces, <em>one wall at a time.</em></h1>
+            <p class="hero__lede">
+              Costello Painting Inc. brings remodeling and painting craft to homes and businesses around Mulliken,
+              Michigan.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--gold" href="#contact">Request a quote</a>
+              <a class="btn btn--ghost" href="#services">See our services</a>
             </div>
-            <div class="hero__footnote"><span class="hero__footnote-rule" aria-hidden="true"></span><span>Heirloom <i>·</i> Slow-grown <i>·</i> Open-pollinated</span></div>
+            <ul class="hero__facts">
+              <li><strong>15+</strong> years of steady hands</li>
+              <li><strong>4</strong> services, from rooms to tanks</li>
+              <li><strong>24/7</strong> by phone or email</li>
+            </ul>
           </div>
 
-          <figure class="hero__visual">
-            <img src="/images/garden-hero.jpg" alt="A small seedling, seed packets and a watering can in a sunlit greenhouse." width="1536" height="1024" fetchpriority="high" />
-            <div class="hero__seal" aria-hidden="true"><span>PLANT</span><span>THEN</span><span>PAUSE</span><i>✳</i></div>
-            <figcaption class="hero__caption"><span>01 / A slower start</span><span>Little seeds. Long stories.</span></figcaption>
+          <figure class="hero__chip">
+            <div class="swatch-strip" aria-hidden="true">
+              <span style="--c: #2e4a5f"></span><span style="--c: #7b3f34"></span><span style="--c: #c9973f"></span
+              ><span style="--c: #e7ddc9"></span>
+            </div>
+            <figcaption>
+              <span class="hero__chip-label">Try a color</span>
+              <strong id="colorName">Harbor Blue</strong>
+              <button class="hero__chip-btn" id="colorBtn" type="button">Next color <span aria-hidden="true">→</span></button>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="hero__marquee" aria-hidden="true">
+          <div class="hero__marquee-track">
+            <span>Premium materials</span><span>·</span><span>Careful prep</span><span>·</span><span>Clean edges</span
+            ><span>·</span><span>Tidy finish</span><span>·</span><span>Premium materials</span><span>·</span
+            ><span>Careful prep</span><span>·</span><span>Clean edges</span><span>·</span><span>Tidy finish</span
+            ><span>·</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCROLL PAINT BAND -->
+      <section class="paintband" aria-label="Costello Painting details">
+        <div class="paintband__inner container">
+          <p class="scroll-note"><span class="scroll-note__line" aria-hidden="true"></span> Scroll to paint the wall</p>
+          <div class="paintband__grid">
+            <div class="stat">
+              <strong><span data-count="15">15</span>+</strong>
+              <span>years of remodeling and painting</span>
+            </div>
+            <div class="stat">
+              <strong><span data-count="4">4</span></strong>
+              <span>services, from rooms to tanks</span>
+            </div>
+            <div class="stat">
+              <strong>24/7</strong>
+              <span>reach us by phone or email</span>
+            </div>
+            <div class="stat">
+              <strong>MI</strong>
+              <span>based in Mulliken, Michigan</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section about" id="about">
+        <div class="container about__grid">
+          <div class="about__copy" data-reveal>
+            <p class="eyebrow"><span></span> Who we are</p>
+            <h2>Built on excellence, driven by passion.</h2>
+            <p class="lede">
+              For over 15 years we have been creating spaces that inspire. Our team brings innovative techniques,
+              premium materials and close attention to detail to every project, so the finished work beats what you
+              pictured.
+            </p>
+            <p>
+              Our roots are in remodeling and painting. We build every job on trust and honest craftsmanship, and we
+              tailor the plan to you. Refreshing a single room or transforming a whole space, we are committed to
+              bringing your vision to life.
+            </p>
+
+            <ul class="pillars">
+              <li>
+                <span class="pillars__num">01</span>
+                <div>
+                  <h3>Premium materials</h3>
+                  <p>Paint and coatings chosen to last.</p>
+                </div>
+              </li>
+              <li>
+                <span class="pillars__num">02</span>
+                <div>
+                  <h3>Meticulous detail</h3>
+                  <p>Clean edges, protected floors, a tidy finish.</p>
+                </div>
+              </li>
+              <li>
+                <span class="pillars__num">03</span>
+                <div>
+                  <h3>Personal service</h3>
+                  <p>One plan built around your space and your schedule.</p>
+                </div>
+              </li>
+            </ul>
+
+            <a class="text-link" href="#contact">Talk to Costello Painting <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <figure class="about__media" data-reveal>
+            <img
+              src="/images/about-house.jpg"
+              alt="A painter working on the siding of a house"
+              width="1280"
+              height="1600"
+              loading="lazy"
+            />
+            <figcaption>
+              <span class="about__media-swatch" aria-hidden="true"></span>
+              <span><strong>Harbor Blue</strong> Costello Painting Inc.</span>
+            </figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="rhythm" aria-label="The rhythm of a garden">
-        <div class="rhythm__inner container">
-          <p class="eyebrow rhythm__label">A garden has its own rhythm</p>
-          <div class="rhythm__steps">
-            <p><span>01</span> Plant a seed. <em>Then do nothing.</em></p>
-            <span class="rhythm__separator" aria-hidden="true">✳</span>
-            <p><span>02</span> Water it. <em>The roots go first.</em></p>
-            <span class="rhythm__separator" aria-hidden="true">✳</span>
-            <p><span>03</span> Leaves arrive <em>when they’re ready.</em></p>
-            <span class="rhythm__separator" aria-hidden="true">✳</span>
-            <p><span>04</span> Flowers, fruit, dinner. <em>Eventually.</em></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="method section-pad" id="method" aria-labelledby="method-title">
+      <!-- SERVICES -->
+      <section class="section services" id="services">
         <div class="container">
-          <div class="section-heading section-heading--center">
-            <p class="eyebrow"><span class="eyebrow__flower" aria-hidden="true">✳</span> The method</p>
-            <h2 id="method-title">A gentler way to <em>garden.</em></h2>
-            <p>There’s no shortcut to a good harvest. There is a much nicer way to get there.</p>
-          </div>
-          <div class="method-grid">
-            <article class="method-card">
-              <span class="method-card__number">01</span>
-              <div class="method-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 36c8-1 11-6 13-13m0 0C12 24 8 19 9 12c7 0 12 4 13 11Zm0 0c1-8 6-13 14-13 0 7-5 13-14 15Zm0 0v14m-10-3h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 10c2-3 5-4 8-3-1 4-3 6-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-              <h3>Pick a pace</h3>
-              <p>Every packet lists realistic germination and harvest windows, with no miracle claims.</p>
-            </article>
-            <article class="method-card">
-              <span class="method-card__number">02</span>
-              <div class="method-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M9 28h30l-3 14H12L9 28Zm4 0 5-14h12l5 14M18 14V9h12v5M15 34h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 4c3.5 4 4.5 6.5 0 9-4.5-2.5-3.5-5 0-9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-              <h3>Sow and wait</h3>
-              <p>Fresh, tested seed with simple instructions. Water, light, and a little neglect.</p>
-            </article>
-            <article class="method-card">
-              <span class="method-card__number">03</span>
-              <div class="method-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 41V22m0 6c-8 0-13-5-13-12 7 0 12 4 13 12Zm0-3c1-7 6-11 13-11 0 7-5 12-13 13Zm-9 17h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 8h5m-2.5-2.5v5m22-4h6m-3-3v6m3 13h5m-2.5-2.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
-              <h3>Enjoy eventually</h3>
-              <p>Leaves, fruit, flowers and dinner arrive when they are ready, not before.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <div class="category-ribbon" aria-label="Seed collections">
-        <div class="category-ribbon__inner container">
-          <span>House plants</span><i aria-hidden="true">✳</i>
-          <span>Vegetables</span><i aria-hidden="true">✳</i>
-          <span>Fruit</span><i aria-hidden="true">✳</i>
-          <span>Hemp seeds</span><i aria-hidden="true">✳</i>
-          <span>Heirloom</span><i aria-hidden="true">✳</i>
-          <span>Slow grown</span><i aria-hidden="true">✳</i>
-          <span>Open pollinated</span>
-        </div>
-      </div>
-
-      <section class="collections-intro" id="collections" aria-labelledby="collections-title">
-        <div class="container collections-intro__inner">
-          <p class="eyebrow"><span class="eyebrow__flower" aria-hidden="true">✳</span> The seed shelves</p>
-          <h2 id="collections-title">Find your kind<br />of <em>slow.</em></h2>
-          <p>Little starts for windowsills, kitchen beds, backyard orchards and the long, leafy in-between.</p>
-          <a href="#house-plants" class="collections-intro__link">Take a look around <span aria-hidden="true">↓</span></a>
-        </div>
-      </section>
-
-      <section class="collection-section collection-section--plants" id="house-plants" aria-labelledby="house-plants-title">
-        <div class="container">
-          <div class="collection-heading">
+          <div class="section-head">
             <div>
-              <p class="eyebrow"><span class="collection-heading__number">01</span> Indoor <span class="eyebrow__slash">/</span> Slow green</p>
-              <h2 id="house-plants-title">House <em>Plants</em></h2>
+              <p class="eyebrow"><span></span> What we do</p>
+              <h2>Our services</h2>
             </div>
-            <p class="collection-heading__copy">Seeds for leafy roommates that thrive on a windowsill and forgive a missed watering. Patience is the main ingredient.</p>
+            <p class="section-head__aside">
+              Remodeling and painting for homes, farms and businesses. Open a panel to see what is included.
+            </p>
           </div>
-          <div class="collection-layout">
-            <figure class="collection-photo">
-              <img src="/images/garden-plants.jpg" alt="Monstera, snake plant and trailing vines in terracotta pots on a dark windowsill." width="1370" height="1148" loading="lazy" />
-              <figcaption><span>Slow green</span><span>01 — 06</span></figcaption>
-            </figure>
-            <div class="product-grid" data-product-grid="house-plants" aria-label="House plant seeds"></div>
-          </div>
-        </div>
-      </section>
 
-      <section class="collection-section collection-section--vegetables collection-section--reverse" id="vegetables" aria-labelledby="vegetables-title">
-        <div class="container">
-          <div class="collection-heading">
-            <div>
-              <p class="eyebrow"><span class="collection-heading__number">02</span> Garden <span class="eyebrow__slash">/</span> Kitchen bound</p>
-              <h2 id="vegetables-title">Vegetables</h2>
-            </div>
-            <p class="collection-heading__copy">Heirloom and open-pollinated seeds for the unhurried grower. Sow, wander off, come back to dinner.</p>
-          </div>
-          <div class="collection-layout">
-            <figure class="collection-photo">
-              <img src="/images/garden-vegetables.jpg" alt="A harvest of heirloom tomatoes, carrots, kale, peppers and cucumber on a dark wooden table." width="1536" height="1024" loading="lazy" />
-              <figcaption><span>Kitchen bound</span><span>02 — 06</span></figcaption>
-            </figure>
-            <div class="product-grid" data-product-grid="vegetables" aria-label="Vegetable seeds"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="collection-section collection-section--fruit" id="fruit" aria-labelledby="fruit-title">
-        <div class="container">
-          <div class="collection-heading">
-            <div>
-              <p class="eyebrow"><span class="collection-heading__number">03</span> Orchard <span class="eyebrow__slash">/</span> Worth the wait</p>
-              <h2 id="fruit-title">Fruit</h2>
-            </div>
-            <p class="collection-heading__copy">Berries, melons and long-game trees. Some reward you this summer, others in a few seasons. We like it that way.</p>
-          </div>
-          <div class="collection-layout">
-            <figure class="collection-photo">
-              <img src="/images/garden-fruit.jpg" alt="Strawberries, blueberries, blackberries, figs and peaches on a weathered wooden table." width="1370" height="1148" loading="lazy" />
-              <figcaption><span>Worth the wait</span><span>03 — 06</span></figcaption>
-            </figure>
-            <div class="product-grid" data-product-grid="fruit" aria-label="Fruit seeds and plants"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="collection-section collection-section--hemp collection-section--reverse" id="hemp-seeds" aria-labelledby="hemp-title">
-        <div class="container">
-          <div class="collection-heading">
-            <div>
-              <p class="eyebrow"><span class="collection-heading__number">04</span> Hemp <span class="eyebrow__slash">/</span> Compliance</p>
-              <h2 id="hemp-title">Hemp <em>Seeds</em></h2>
-            </div>
-            <p class="collection-heading__copy">Farm Bill-compliant hemp seeds selected for genetic lineage and terpene profiles. Laws vary, so please check the rules where you live before you order.</p>
-          </div>
-          <div class="collection-layout">
-            <figure class="collection-photo">
-              <img src="/images/garden-hemp.jpg" alt="Hemp foliage beside a wooden bowl of hemp seeds on a dark garden table." width="1536" height="1024" loading="lazy" />
-              <figcaption><span>Only where legal</span><span>04 — 06</span></figcaption>
-            </figure>
-            <div class="product-grid" data-product-grid="hemp-seeds" aria-label="Hemp seeds"></div>
-          </div>
-          <p class="hemp-notice"><span aria-hidden="true">✳</span><span><strong>A small but important note.</strong> Hemp seeds ship only where legal. Please check the rules where you live before ordering.</span></p>
-        </div>
-      </section>
-
-      <section class="newsletter" id="newsletter" aria-labelledby="newsletter-title">
-        <div class="newsletter__inner container">
-          <div class="newsletter__heading">
-            <p class="eyebrow"><span class="eyebrow__flower" aria-hidden="true">✳</span> The slow note</p>
-            <h2 id="newsletter-title">No rush.<br /><em>Just seeds.</em></h2>
-          </div>
-          <div class="newsletter__body">
-            <p>Get a slow monthly note on what to sow next. We send one email, whenever we feel like it.</p>
-            <form class="newsletter-form" data-newsletter-form>
-              <label class="sr-only" for="newsletter-email">Your email address</label>
-              <div class="newsletter-form__row">
-                <input id="newsletter-email" name="email" type="email" placeholder="Your email address" autocomplete="email" required />
-                <button class="button button--light" type="submit">Subscribe <span aria-hidden="true">↗</span></button>
+          <div class="services__list" data-reveal>
+            <article class="service is-open">
+              <button class="service__head" type="button" aria-expanded="true">
+                <span class="service__index">01</span>
+                <h3>Interior painting</h3>
+                <span class="service__toggle" aria-hidden="true"></span>
+              </button>
+              <div class="service__body">
+                <div class="service__inner">
+                  <p>
+                    Refresh one room or repaint the whole place. We prep the surfaces, protect what you own, and cut
+                    clean lines.
+                  </p>
+                  <ul>
+                    <li>Walls and ceilings</li>
+                    <li>Trim and doors</li>
+                    <li>Color help</li>
+                    <li>Tidy job site</li>
+                  </ul>
+                  <a class="text-link" href="#contact">Request this service <span aria-hidden="true">→</span></a>
+                </div>
               </div>
-              <p class="newsletter-form__message" data-newsletter-message aria-live="polite">One thoughtful note. No rush, no noise.</p>
-            </form>
+            </article>
+
+            <article class="service">
+              <button class="service__head" type="button" aria-expanded="false">
+                <span class="service__index">02</span>
+                <h3>Exterior painting</h3>
+                <span class="service__toggle" aria-hidden="true"></span>
+              </button>
+              <div class="service__body">
+                <div class="service__inner">
+                  <p>
+                    Houses, garages, barns and outbuildings. Good prep and quality coatings so the color holds up to
+                    Michigan weather.
+                  </p>
+                  <ul>
+                    <li>Siding and trim</li>
+                    <li>Garages</li>
+                    <li>Barns</li>
+                    <li>Outbuildings</li>
+                  </ul>
+                  <a class="text-link" href="#contact">Request this service <span aria-hidden="true">→</span></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="service">
+              <button class="service__head" type="button" aria-expanded="false">
+                <span class="service__index">03</span>
+                <h3>Remodeling</h3>
+                <span class="service__toggle" aria-hidden="true"></span>
+              </button>
+              <div class="service__body">
+                <div class="service__inner">
+                  <p>
+                    Kitchens and rooms rebuilt with the same care we bring to paint. One crew, one plan, one clean
+                    finish.
+                  </p>
+                  <ul>
+                    <li>Kitchens</li>
+                    <li>Room updates</li>
+                    <li>Cabinets</li>
+                    <li>Finish work</li>
+                  </ul>
+                  <a class="text-link" href="#contact">Request this service <span aria-hidden="true">→</span></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="service">
+              <button class="service__head" type="button" aria-expanded="false">
+                <span class="service__index">04</span>
+                <h3>Bin and tank sealing</h3>
+                <span class="service__toggle" aria-hidden="true"></span>
+              </button>
+              <div class="service__body">
+                <div class="service__inner">
+                  <p>
+                    Hot rubber sealing for bins and tanks, built to protect the structure. See the tank photos in our
+                    work gallery.
+                  </p>
+                  <ul>
+                    <li>Hot rubber coating</li>
+                    <li>Bins</li>
+                    <li>Tanks</li>
+                    <li>Farm and commercial</li>
+                  </ul>
+                  <a class="text-link" href="#contact">Request this service <span aria-hidden="true">→</span></a>
+                </div>
+              </div>
+            </article>
           </div>
-          <span class="newsletter__ornament" aria-hidden="true">✳</span>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section class="section work" id="work">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow"><span></span> Satisfied clients</p>
+              <h2>Real jobs from our crew.</h2>
+            </div>
+            <p class="section-head__aside">Tap any photo to view it larger.</p>
+          </div>
+
+          <div class="filters" role="group" aria-label="Filter work photos">
+            <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+            <button class="chip" type="button" data-filter="tanks" aria-pressed="false">Tanks and bins</button>
+            <button class="chip" type="button" data-filter="barns" aria-pressed="false">Barns and garages</button>
+          </div>
+
+          <div class="work__grid" id="workGrid">
+            <figure class="work__item is-wide" data-cat="tanks">
+              <button type="button" data-full="/images/work-tank-white-4.jpg" data-caption="Large white tank, four views">
+                <img src="/images/work-tank-white-4.jpg" alt="A collage of four pictures of a large white tank" loading="lazy" />
+                <span class="work__cap">Tanks &amp; bins</span>
+              </button>
+              <figcaption>Large white tank, four views</figcaption>
+            </figure>
+
+            <figure class="work__item" data-cat="barns">
+              <button type="button" data-full="/images/work-garage-red.jpg" data-caption="Red garage, before and after">
+                <img src="/images/work-garage-red.jpg" alt="A before and after photo of a red garage" loading="lazy" />
+                <span class="work__cap">Barns &amp; garages</span>
+              </button>
+              <figcaption>Red garage, before and after</figcaption>
+            </figure>
+
+            <figure class="work__item" data-cat="tanks">
+              <button type="button" data-full="/images/work-tanks-multi.jpg" data-caption="Tank coating, several views">
+                <img src="/images/work-tanks-multi.jpg" alt="A collage of pictures of different types of tanks" loading="lazy" />
+                <span class="work__cap">Tanks &amp; bins</span>
+              </button>
+              <figcaption>Tank coating, several views</figcaption>
+            </figure>
+
+            <figure class="work__item" data-cat="barns">
+              <button type="button" data-full="/images/work-barn-field.jpg" data-caption="Red barn in an open field">
+                <img src="/images/work-barn-field.jpg" alt="A large red barn sitting in the middle of a grassy field" loading="lazy" />
+                <span class="work__cap">Barns &amp; garages</span>
+              </button>
+              <figcaption>Red barn in an open field</figcaption>
+            </figure>
+
+            <figure class="work__item" data-cat="tanks">
+              <button type="button" data-full="/images/work-tank-white-views.jpg" data-caption="Tank sealing in four views">
+                <img src="/images/work-tank-white-views.jpg" alt="A collage of four pictures of a large white tank" loading="lazy" />
+                <span class="work__cap">Tanks &amp; bins</span>
+              </button>
+              <figcaption>Tank sealing in four views</figcaption>
+            </figure>
+
+            <figure class="work__item" data-cat="tanks">
+              <button type="button" data-full="/images/work-fence-tank.jpg" data-caption="Fence work beside a large tank">
+                <img src="/images/work-fence-tank.jpg" alt="A man working on a fence next to a large tank" loading="lazy" />
+                <span class="work__cap">Tanks &amp; bins</span>
+              </button>
+              <figcaption>Fence work beside a large tank</figcaption>
+            </figure>
+
+            <figure class="work__item" data-cat="barns">
+              <button type="button" data-full="/images/work-barn-red.jpg" data-caption="Finished red barn">
+                <img src="/images/work-barn-red.jpg" alt="A red barn sitting in the middle of a grassy field" loading="lazy" />
+                <span class="work__cap">Barns &amp; garages</span>
+              </button>
+              <figcaption>Finished red barn</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="section process" id="process">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow"><span></span> How a project works</p>
+              <h2>Four steps from first call to finished walls.</h2>
+            </div>
+          </div>
+
+          <ol class="steps" data-reveal>
+            <li>
+              <span class="steps__num">1</span>
+              <h3>Tell us the plan</h3>
+              <p>Call or email with what you want painted or remodeled. A photo or two helps.</p>
+            </li>
+            <li>
+              <span class="steps__num">2</span>
+              <h3>We talk it through</h3>
+              <p>We go over the space, the materials and the color, then give you a clear quote.</p>
+            </li>
+            <li>
+              <span class="steps__num">3</span>
+              <h3>Prep and paint</h3>
+              <p>Surfaces get cleaned and prepped first, then the coats go on with care.</p>
+            </li>
+            <li>
+              <span class="steps__num">4</span>
+              <h3>Final walk-through</h3>
+              <p>We check every edge with you and clean up before we leave.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section faq" id="faq">
+        <div class="container faq__grid">
+          <div class="faq__intro" data-reveal>
+            <p class="eyebrow"><span></span> Good to know</p>
+            <h2>Questions we hear a lot</h2>
+            <p class="lede">Not here? Call us any time on <a href="tel:+19012103709">(901) 210-3709</a>.</p>
+            <a class="btn btn--outline" href="#contact">Ask us directly</a>
+          </div>
+
+          <div class="faq__list">
+            <details class="faq__item" open>
+              <summary>What do you paint and remodel?<span aria-hidden="true"></span></summary>
+              <p>
+                Interior and exterior painting, remodeling, and hot rubber sealing for bins and tanks. Homes, barns,
+                garages and commercial buildings are all fair game.
+              </p>
+            </details>
+            <details class="faq__item">
+              <summary>Can you do just one room?<span aria-hidden="true"></span></summary>
+              <p>Yes. We take on a single room refresh as seriously as a whole-building project.</p>
+            </details>
+            <details class="faq__item">
+              <summary>Where do you work?<span aria-hidden="true"></span></summary>
+              <p>
+                We are based at 10623 Boyer Road in Mulliken, Michigan, and serve the surrounding area including
+                Lansing. Call and tell us where the job is.
+              </p>
+            </details>
+            <details class="faq__item">
+              <summary>How do I get a quote?<span aria-hidden="true"></span></summary>
+              <p>
+                Use the form below, call (901) 210-3709, or email
+                <a href="mailto:costellopaintinginc@yahoo.com">costellopaintinginc@yahoo.com</a>. Tell us what you have
+                in mind and we will set up a time to talk.
+              </p>
+            </details>
+            <details class="faq__item">
+              <summary>When can I reach you?<span aria-hidden="true"></span></summary>
+              <p>
+                You can reach us 24/7 by phone or email. If we miss your call, leave a message and we will get back to
+                you.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section contact" id="contact">
+        <div class="container contact__grid">
+          <div class="contact__copy" data-reveal>
+            <p class="eyebrow eyebrow--light"><span></span> Get started</p>
+            <h2>Let's get your project started.</h2>
+            <p class="lede">
+              Quick and reliable. Reach out any hour by phone or email, or send the form and we will come back to you.
+            </p>
+
+            <ul class="contact__cards">
+              <li>
+                <span class="contact__label">Phone</span>
+                <a href="tel:+19012103709"><strong>(901) 210-3709</strong></a>
+              </li>
+              <li>
+                <span class="contact__label">Email</span>
+                <a href="mailto:costellopaintinginc@yahoo.com"><strong>costellopaintinginc@yahoo.com</strong></a>
+              </li>
+              <li>
+                <span class="contact__label">Office</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&amp;query=10623+Boyer+Road+Mulliken+MI+48861"
+                  target="_blank"
+                  rel="noopener"
+                  ><strong>10623 Boyer Road, Mulliken, MI 48861</strong> <span aria-hidden="true">↗</span></a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact__form-wrap" id="formWrap">
+            <form class="quote-form" id="quoteForm" novalidate>
+              <h3>Request a quote</h3>
+              <p class="quote-form__note">Tell us a little about the job. We will reply by phone or email.</p>
+
+              <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required placeholder="First and last name" />
+                <span class="field__error" data-error-for="name" hidden>Please enter your name.</span>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="(555) 123-4567" />
+                  <span class="field__error" data-error-for="phone" hidden
+                    >Enter a phone number or an email so we can reach you.</span
+                  >
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+                  <span class="field__error" data-error-for="email" hidden>Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="service">What do you need?</label>
+                <select id="service" name="service" required>
+                  <option value="" selected disabled>Select a service</option>
+                  <option>Interior painting</option>
+                  <option>Exterior painting</option>
+                  <option>Remodeling</option>
+                  <option>Bin and tank sealing</option>
+                  <option>Something else</option>
+                </select>
+                <span class="field__error" data-error-for="service" hidden>Choose the service you need.</span>
+              </div>
+
+              <div class="field">
+                <label for="details">Project details</label>
+                <textarea id="details" name="details" rows="4" placeholder="Add a few words about the project."></textarea>
+              </div>
+
+              <button class="btn btn--gold btn--block" type="submit">Send my request</button>
+              <p class="quote-form__fineprint">
+                Sending opens your email app with this message ready to go, addressed to Costello Painting Inc.
+              </p>
+            </form>
+
+            <div class="quote-success" id="quoteSuccess" hidden>
+              <div class="quote-success__icon" aria-hidden="true">✓</div>
+              <h3>Your email is ready to send</h3>
+              <p>
+                Your email app should have opened with your message. Press send there and we will take it from here. If
+                nothing opened, copy the message below or call
+                <a href="tel:+19012103709">(901) 210-3709</a>.
+              </p>
+              <pre class="quote-success__preview" id="quotePreview"></pre>
+              <div class="quote-success__actions">
+                <button class="btn btn--outline btn--sm" type="button" id="copyQuote">Copy my message</button>
+                <a class="btn btn--solid btn--sm" href="tel:+19012103709">Call us</a>
+                <button class="btn btn--ghost-dark btn--sm" type="button" id="editQuote">Edit message</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="site-footer__main container">
-        <a class="brand brand--footer" href="#top" aria-label="Lethargic Gardens, back to top">
-          <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 40V23m0 8C14.5 31 9.5 25.5 10 17c8.2-.1 13.6 4.6 14 13m.1-2c.9-9.1 6.4-14.5 15-14.4.3 8.3-5.3 14.4-15 16.2" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          <span class="brand__wordmark"><span>LETHARGIC</span><span>GARDENS</span></span>
+      <div class="container site-footer__top">
+        <a class="brand brand--footer" href="#top">
+          <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="13" y="6" width="22" height="5" rx="2.5" fill="currentColor" opacity=".55" />
+            <path d="M14 15h20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+            <path d="M18.5 21.5c2.6 2.4 2.9 5.2 1.2 7.6-1.7 2.4-1.4 4.6.6 6.4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+          </svg>
+          <span class="brand__wordmark">
+            <span class="brand__name">Costello Painting</span>
+            <span class="brand__sub">Painting &amp; Remodeling</span>
+          </span>
         </a>
-        <p class="site-footer__motto">Good things take their time.</p>
-        <nav class="site-footer__links" aria-label="Footer navigation">
-          <a href="#collections">Shop seeds</a>
-          <a href="#method">Our method</a>
-          <a href="#newsletter">The slow note</a>
-          <a href="#hemp-seeds">Hemp seed notice</a>
+        <nav aria-label="Footer">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#work">Our work</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
         </nav>
+        <div class="site-footer__contact">
+          <a href="tel:+19012103709">(901) 210-3709</a>
+          <a href="mailto:costellopaintinginc@yahoo.com">costellopaintinginc@yahoo.com</a>
+          <span>10623 Boyer Road, Mulliken, MI 48861</span>
+        </div>
       </div>
-      <div class="site-footer__bottom container">
-        <span>© 2026 Lethargic Gardens</span>
-        <span>Seeds for the unhurried gardener <i aria-hidden="true">✳</i> Nothing needs to happen today.</span>
+      <div class="container site-footer__bottom">
+        <p>© <span id="year">2026</span> Costello Painting Inc. Mulliken, Michigan.</p>
+        <p class="site-footer__meta">Interior &amp; exterior painting · Remodeling · Bin &amp; tank sealing</p>
       </div>
     </footer>
 
-    <button class="cart-backdrop" type="button" data-cart-backdrop aria-label="Close bag" hidden></button>
-    <aside class="cart-drawer" id="cart-drawer" data-cart-drawer role="dialog" aria-modal="true" aria-labelledby="cart-title" tabindex="-1" hidden>
-      <div class="cart-drawer__header">
-        <div>
-          <p class="eyebrow">A little bag of possibility</p>
-          <h2 id="cart-title">Your <em>bag.</em></h2>
-        </div>
-        <button class="cart-close" type="button" data-close-cart aria-label="Close bag"><span></span><span></span></button>
-      </div>
-      <div class="cart-drawer__items" data-cart-items></div>
-      <div class="cart-drawer__footer">
-        <div class="cart-subtotal"><span>Subtotal</span><strong data-cart-total>$0.00</strong></div>
-        <button class="button button--dark cart-checkout" type="button" data-checkout>Continue to checkout <span aria-hidden="true">↗</span></button>
-        <p class="cart-note" data-cart-note>Checkout isn’t connected here yet. Your bag stays saved in this browser.</p>
-      </div>
-    </aside>
-    <div class="toast" data-toast role="status" aria-live="polite" aria-atomic="true"></div>
+    <div class="sticky-call">
+      <a href="tel:+19012103709">Call now</a>
+      <a class="sticky-call__gold" href="#contact">Get a quote</a>
+    </div>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+      <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close photo viewer">✕</button>
+      <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" type="button" aria-label="Previous photo">‹</button>
+      <figure>
+        <img id="lightboxImg" src="" alt="" />
+        <figcaption id="lightboxCap"></figcaption>
+      </figure>
+      <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" type="button" aria-label="Next photo">›</button>
+    </div>
   </body>
 </html>
